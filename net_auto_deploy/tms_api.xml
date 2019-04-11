@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NET_AUTO_DEPLOY>
+  <Servers>
+  <!--目标服务器-->
+    <Server>
+	  <IP>192.168.2.18</IP>
+	  <User>administrator</User>
+	  <Pword>123456</Pword>
+	</Server>
+	 <Server>
+	  <IP>192.168.2.17</IP>
+	  <User>administrator</User>
+	  <Pword>123456</Pword>
+	</Server>
+  </Servers>
+  <!--iis站点的标识-->
+  <IISSite>www.tms.com</IISSite>
+  <Source>
+	<!--要发布文件、文件夹-->
+    <Items>
+      <Item>E:\upload\Jenkins\workspace\TMS_API\tms_web.dll</Item>
+      <Item>E:\upload\Jenkins\workspace\TMS_API\tms_web.xml</Item>
+      <Item>E:\upload\Jenkins\workspace\HTML\</Item>
+    </Items>
+  </Source>
+  <!--目标发布目录-->
+  <DestinationFolder>D:\web\www.tms.com\bin</DestinationFolder>
+  <!--将目标发布目录进行的备份后存放的目录-->
+  <BackupFolder>D:\web\www.tms.com\backup</BackupFolder>
+</NET_AUTO_DEPLOY>

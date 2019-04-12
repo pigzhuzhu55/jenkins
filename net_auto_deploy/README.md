@@ -59,12 +59,12 @@
 
 ## 新建一个任务的所有步骤以及配置
 - 新建任务
-> 构建一个自由风格的软件项目--[test]
-> 源码管理--我这里用的是svn,所以选择Subversion--输入路径以及身份验证
-> 构建触发器--根据需要自己选择
-> 构建 -- Build a Visual Studio project or solution using MSBuild --这里如果没用选项卡，需要你去全局工具配置里面增加MSBuild的配置后就会有的。
-> 构建 -- Windows PowerShell -- 
+>- 构建一个自由风格的软件项目--[test]
+ - 源码管理--我这里用的是svn,所以选择Subversion--输入路径以及身份验证
+ - 构建触发器--根据需要自己选择
+ - 构建 -- Build a Visual Studio project or solution using MSBuild --这里如果没用选项卡，需要你去全局工具配置里面增加MSBuild的配置后就会有的。
+ - 构建 -- Windows PowerShell -- 
       D:\jenkins\net_auto_deploy\NET_AUTO_DEPLOY.ps1 -Path D:\jenkins\net_auto_deploy\tms_api.xml
-> 保存
+ - 保存
 
 ## 立即构建

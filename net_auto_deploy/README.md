@@ -1,8 +1,8 @@
-# IIS＋Jenkins+Powershell+SVN  基于.net framework的web站点自动化部署
+# Jenkins+Powershell+SVN  基于IIS、.NET Framework的web站点自动化部署
 
 ## 前置条件以及环境
-- windows服务器(一台部署jenkins、其他服务器装iis用于站点部署、所有服务器都要安装powershell)
-- iis+asp.net
+- windows服务器(一台部署jenkins、其他服务器装IIS用于站点部署、所有服务器都要安装powershell)
+- IIS + .NET Framework
 - powershell
 - svn(也可以是git)
 - jenkins
@@ -12,7 +12,7 @@
 	--192.168.2.10 jenkins+vs2017+powershell
 	--192.168.2.21 powershell+iis站点
 	--192.168.2.22 powershell+iis站点
-- iis站点标识为  www.test.com ，我直接用域名来标记站点的名称，这里2个站点，用于测试自动部署到多个服务器
+- iis Web站点标识为  www.test.com ，我直接用域名来标记站点的名称，这里1个站点2个部署，用于测试自动部署到多个服务器
 - powershell用于脚本去同步文件、站点停止、启动
 
 ## 前置步骤

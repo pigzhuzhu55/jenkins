@@ -3,12 +3,12 @@
   <Servers>
   <!--目标服务器-->
     <Server>
-	  <IP>192.168.2.18</IP>
+	  <IP>192.168.2.21</IP>
 	  <User>administrator</User>
 	  <Pword>123456</Pword>
 	</Server>
 	 <Server>
-	  <IP>192.168.2.17</IP>
+	  <IP>192.168.2.22</IP>
 	  <User>administrator</User>
 	  <Pword>123456</Pword>
 	</Server>
@@ -18,13 +18,13 @@
   <Source>
 	<!--要发布文件、文件夹-->
     <Items>
-      <Item>E:\upload\Jenkins\workspace\TMS_API\tms_web.dll</Item>
-      <Item>E:\upload\Jenkins\workspace\TMS_API\tms_web.xml</Item>
-      <Item>E:\upload\Jenkins\workspace\HTML\</Item>
+      <Item>E:\upload\Jenkins\workspace\TEST_API\bin\test_web.dll</Item>
+      <Item>E:\upload\Jenkins\workspace\TEST_API\bin\tms_web.xml</Item>
+      <Item>E:\upload\Jenkins\workspace\TEST_API\static</Item>
     </Items>
   </Source>
   <!--目标发布目录-->
-  <DestinationFolder>D:\web\www.tms.com\bin</DestinationFolder>
+  <DestinationFolder>D:\web\www.test.com</DestinationFolder>
   <!--将目标发布目录进行的备份后存放的目录-->
-  <BackupFolder>D:\web\www.tms.com\backup</BackupFolder>
+  <BackupFolder>D:\web\www.test.com\backup</BackupFolder>
 </NET_AUTO_DEPLOY>

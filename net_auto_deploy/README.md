@@ -1,8 +1,8 @@
-# IIS＋Jenkins+Powershell+SVN  web站点自动化部署
+# IIS＋Jenkins+Powershell+SVN  基于.net framework的web站点自动化部署
 
 ## 前置条件以及环境
 - windows服务器(一台部署jenkins、其他服务器装iis用于站点部署、所有服务器都要安装powershell)
-- iis
+- iis+asp.net
 - powershell
 - svn(也可以是git)
 - jenkins

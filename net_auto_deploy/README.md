@@ -30,8 +30,8 @@
 > Get-Item WSMan:\localhost\Client\TrustedHosts | Select-Object Value
 
 - 防火墙
-> New-NetFirewallRule -Name powershell-remote-tcp -Direction Inbound -DisplayName 'PowerShell远程连接 TCP' -> LocalPort 5985-5986 -Protocol 'TCP'
-> New-NetFirewallRule -Name powershell-remote-udp -Direction Inbound -DisplayName 'PowerShell远程连接 UDP' -> > LocalPort 5985-5986 -Protocol 'UDP'
+> -- New-NetFirewallRule -Name powershell-remote-tcp -Direction Inbound -DisplayName 'PowerShell远程连接 TCP' -> LocalPort 5985-5986 -Protocol 'TCP'
+ -- New-NetFirewallRule -Name powershell-remote-udp -Direction Inbound -DisplayName 'PowerShell远程连接 UDP' -> > LocalPort 5985-5986 -Protocol 'UDP'
 
 - 导入IIS管理模块
 > Import-Module WebAdministration
@@ -49,9 +49,9 @@
 > appcmd start site "www.test.com"
 
 - 用户凭证
-> $User = "administrator"
-> $PWord = ConvertTo-SecureString -String "zqhl.jsb.12306" -AsPlainText -Force
-> $Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $User, $PWord
+>- $User = "administrator"
+- $PWord = ConvertTo-SecureString -String "zqhl.jsb.12306" -AsPlainText -Force
+- $Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $User, $PWord
 - 远程powershell
 > Enter-PSSession -ComputerName 192.168.2.18 -Credential $Credential
 - 退出远程powershell

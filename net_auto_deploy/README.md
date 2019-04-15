@@ -30,8 +30,8 @@
 > Get-Item WSMan:\localhost\Client\TrustedHosts | Select-Object Value
 
 - 防火墙
-> -- New-NetFirewallRule -Name powershell-remote-tcp -Direction Inbound -DisplayName 'PowerShell远程连接 TCP' -> LocalPort 5985-5986 -Protocol 'TCP'
- -- New-NetFirewallRule -Name powershell-remote-udp -Direction Inbound -DisplayName 'PowerShell远程连接 UDP' -> > LocalPort 5985-5986 -Protocol 'UDP'
+> New-NetFirewallRule -Name powershell-remote-tcp -Direction Inbound -DisplayName 'PowerShell远程连接 TCP' -> LocalPort 5985-5986 -Protocol 'TCP'  
+ New-NetFirewallRule -Name powershell-remote-udp -Direction Inbound -DisplayName 'PowerShell远程连接 UDP' -> > LocalPort 5985-5986 -Protocol 'UDP'
 
 - 导入IIS管理模块
 > Import-Module WebAdministration
@@ -41,7 +41,7 @@
 
 **其他一些有用到的脚本**
 - 使用appcmd.exe：
-> New-Alias -name appcmd -value $env:windir\system32\inetsrv\appcmd.exe
+> New-Alias -name appcmd -value $env:windir\system32\inetsrv\appcmd.exe  
 这样就可以在当前PS环境下直接使用appcmd了
 - 停止站点
 > appcmd stop site "www.test.com"
@@ -49,13 +49,13 @@
 > appcmd start site "www.test.com"
 
 - 用户凭证
->- $User = "administrator"
-- $PWord = ConvertTo-SecureString -String "zqhl.jsb.12306" -AsPlainText -Force
-- $Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $User, $PWord
+> $User = "administrator"  
+  $PWord = ConvertTo-SecureString -String "zqhl.jsb.12306" -AsPlainText -Force  
+ $Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $User, $PWord  
 - 远程powershell
-> Enter-PSSession -ComputerName 192.168.2.18 -Credential $Credential
-- 退出远程powershell
-> Exit-Pssession
+> Enter-PSSession -ComputerName 192.168.2.18 -Credential $Credential  
+- 退出远程powershell  
+> Exit-Pssession  
 
 ## jenkins插件安装
  **安装的时候，推荐默认安装一些常用的插件，这里就这次部署，我们还需要安装如下插件**

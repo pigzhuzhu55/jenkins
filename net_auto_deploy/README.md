@@ -6,7 +6,9 @@
 - powershell
 - svn(也可以是git)
 - jenkins
-- vs2017（最好在jenkins的服务器上也安装它，且跟你开发的版本一致，不然构建代码的时候会报各种依赖异常，你要一个一个去指定路径并排除）
+- vs2017（傻瓜化就在jenkins的服务器上也安装它，且跟你开发的版本一致，不然构建代码的时候会报各种依赖异常，你要一个一个去指定路径并排除）
+- 如果vs2017不安装，那么把开发环境的MSBuild目录拷贝到服务器，例如（D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild）
+  ，另外一个是framework的版本列表，一起拷贝过来，例如（C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework）
 ## 本文涉及的环境说明
 - 服务器3台
 	--192.168.2.10 jenkins+vs2017+powershell

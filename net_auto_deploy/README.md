@@ -36,6 +36,9 @@
 - 导入IIS管理模块
 > Import-Module WebAdministration
 
+- 如果遇到 can not rinning scirpt错误，执行脚本
+> set-executionpolicy remotesigned
+
 **其他一些有用到的脚本**
 - 使用appcmd.exe：
 > New-Alias -name appcmd -value $env:windir\system32\inetsrv\appcmd.exe

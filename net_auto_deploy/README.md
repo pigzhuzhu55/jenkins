@@ -31,7 +31,7 @@
 
 - 防火墙
 > New-NetFirewallRule -Name powershell-remote-tcp -Direction Inbound -DisplayName 'PowerShell远程连接 TCP' -> LocalPort 5985-5986 -Protocol 'TCP'  
- New-NetFirewallRule -Name powershell-remote-udp -Direction Inbound -DisplayName 'PowerShell远程连接 UDP' -> > LocalPort 5985-5986 -Protocol 'UDP'
+ New-NetFirewallRule -Name powershell-remote-udp -Direction Inbound -DisplayName 'PowerShell远程连接 UDP' -> LocalPort 5985-5986 -Protocol 'UDP'
 
 - 导入IIS管理模块
 > Import-Module WebAdministration

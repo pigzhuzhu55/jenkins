@@ -50,7 +50,7 @@
 
 - 用户凭证
 > $User = "administrator"  
-  $PWord = ConvertTo-SecureString -String "zqhl.jsb.12306" -AsPlainText -Force  
+  $PWord = ConvertTo-SecureString -String "666666" -AsPlainText -Force  
  $Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $User, $PWord  
 - 远程powershell
 > Enter-PSSession -ComputerName 192.168.2.18 -Credential $Credential  
